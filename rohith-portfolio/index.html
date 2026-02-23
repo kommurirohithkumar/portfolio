@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rohith Kumar | Creative Freelancer</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#0f0f0f;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* NAVBAR */
+nav{
+    position:fixed;
+    width:100%;
+    padding:20px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    backdrop-filter:blur(12px);
+    background:rgba(0,0,0,0.3);
+    z-index:1000;
+}
+
+nav h2{
+    font-weight:800;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:30px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:white;
+    font-weight:400;
+    transition:.3s;
+}
+
+nav ul li a:hover{
+    color:#00ffae;
+}
+
+/* HERO */
+.hero{
+    height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 8%;
+}
+
+.hero-left{
+    max-width:600px;
+}
+
+.hero h1{
+    font-size:70px;
+    font-weight:800;
+    background:linear-gradient(90deg,#00ffae,#00c3ff);
+    -webkit-background-clip:text;
+    background-clip:text;
+    -webkit-text-fill-color:transparent;
+    line-height:1.1;
+}
+
+.hero p{
+    margin:20px 0;
+    color:#aaa;
+}
+
+.btn{
+    padding:12px 28px;
+    border:none;
+    background:#00ffae;
+    color:black;
+    font-weight:600;
+    border-radius:30px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:scale(1.05);
+}
+
+.hero-right img{
+    width:380px;
+    border-radius:20px;
+}
+
+/* SECTION */
+section{
+    padding:100px 8%;
+}
+
+/* SERVICES */
+.services{
+    display:flex;
+    gap:40px;
+    flex-wrap:wrap;
+}
+
+.service-card{
+    flex:1;
+    min-width:250px;
+    background:#1a1a1a;
+    padding:30px;
+    border-radius:20px;
+    transition:.4s;
+}
+
+.service-card:hover{
+    transform:translateY(-10px);
+    background:#202020;
+}
+
+/* PROJECTS */
+.projects{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+}
+
+.project-card{
+    background:#1a1a1a;
+    border-radius:20px;
+    overflow:hidden;
+    transition:.4s;
+}
+
+.project-card img{
+    width:100%;
+    display:block;
+}
+
+.project-card:hover{
+    transform:scale(1.05);
+}
+
+/* COUNTER */
+.stats{
+    display:flex;
+    justify-content:space-around;
+    flex-wrap:wrap;
+    gap:40px;
+    text-align:center;
+}
+
+.stat h2{
+    font-size:40px;
+    color:#00ffae;
+}
+
+/* CONTACT */
+.contact{
+    text-align:center;
+}
+
+input, textarea{
+    width:100%;
+    padding:12px;
+    margin:10px 0;
+    border:none;
+    border-radius:8px;
+}
+
+footer{
+    text-align:center;
+    padding:20px;
+    background:#111;
+    color:#666;
+}
+
+/* FLOATING BLOBS */
+.blob{
+    position:fixed;
+    width:400px;
+    height:400px;
+    background:radial-gradient(circle,#00ffae33,#00c3ff11);
+    border-radius:50%;
+    filter:blur(80px);
+    z-index:-1;
+}
+
+.blob1{ top:-100px; left:-100px; }
+.blob2{ bottom:-100px; right:-100px; }
+
+@media(max-width:900px){
+    .hero{
+        flex-direction:column;
+        text-align:center;
+    }
+    .hero-right img{
+        width:280px;
+        margin-top:30px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="blob blob1"></div>
+<div class="blob blob2"></div>
+
+<nav>
+    <h2>Rohith Kumar</h2>
+    <ul>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<div class="hero">
+    <div class="hero-left">
+        <h1>Creative Digital Freelancer</h1>
+        <p>I design high-converting websites, powerful brand visuals and engaging content strategies for modern businesses.</p>
+        <button class="btn">View My Work</button>
+    </div>
+    <div class="hero-right">
+        <img src="passport size.jpg" alt="Rohith">
+    </div>
+</div>
+
+<section id="services">
+    <h2>What I Do</h2><br>
+    <div class="services">
+        <div class="service-card">
+            <h3>Web Design</h3>
+            <p>Responsive websites, landing pages and modern UI experiences.</p>
+        </div>
+        <div class="service-card">
+            <h3>Content Creation</h3>
+            <p>Strategic content planning, reels scripting and engagement growth.</p>
+        </div>
+        <div class="service-card">
+            <h3>Graphic Design</h3>
+            <p>Brand identity, social media creatives and marketing visuals.</p>
+        </div>
+    </div>
+</section>
+
+<section id="projects">
+    <h2>Featured Projects</h2><br>
+    <div class="projects">
+        <div class="project-card">
+            <img src="WhatsApp Image 2026-02-23 at 9.29.41 AM (1).jpeg">
+        </div>
+        <div class="project-card">
+            <img src="WhatsApp Image 2026-02-21 at 9.01.48 AM.jpeg">
+        </div>
+        <div class="project-card">
+            <img src="WhatsApp Image 2026-02-21 at 9.01.49 AM.jpeg">
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="stats">
+        <div class="stat">
+            <h2 class="counter" data-target="50">0</h2>
+            <p>Projects Completed</p>
+        </div>
+        <div class="stat">
+            <h2 class="counter" data-target="25">0</h2>
+            <p>Happy Clients</p>
+        </div>
+        <div class="stat">
+            <h2 class="counter" data-target="2">0</h2>
+            <p>Years Experience</p>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <div class="contact">
+        <h2>Let's Work Together</h2>
+        <p>Email: rohithkommuri2@gmail.com</p>
+    </div>
+</section>
+
+<footer>
+© 2026 Rohith Kumar | Creative Freelancer
+</footer>
+
+<script>
+const counters = document.querySelectorAll('.counter');
+counters.forEach(counter=>{
+    const update = ()=>{
+        const target = +counter.getAttribute('data-target');
+        const count = +counter.innerText;
+        const inc = target/100;
+        if(count < target){
+            counter.innerText = Math.ceil(count + inc);
+            setTimeout(update,20);
+        }else{
+            counter.innerText = target;
+        }
+    }
+    update();
+});
+</script>
+
+</body>
+</html>
